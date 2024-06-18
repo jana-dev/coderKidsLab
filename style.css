@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Poppins", sans-serif;
 }
 
 /*Padrão*/
-.max-container-center{
-    max-width: 1200px;
-    padding: 0 20px;
+.max-container-center {
+    max-width: 1160px;
+    padding: 0 40px;
     margin: auto;
 }
 
@@ -23,7 +23,7 @@ body{
     border: none;
     transform: rotate(5deg);
     transform-origin: center;
-    font-family: "Gochi Hand", cursive;
+    font-family: cursive;
     text-decoration: none;
     font-size: 15px;
     cursor: pointer;
@@ -33,108 +33,255 @@ body{
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-color: #5cdb95;
     color: black;
-  }
-  
-  .cta-aula-experimental span {
+}
+
+.cta-aula-experimental span {
     background: #f1f5f8;
     display: block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 2px solid #494a4b;
     color: black;
-  }
-  
-  .cta-aula-experimental:active {
+}
+
+.cta-aula-experimental:active {
     transform: translateY(5px);
     padding-bottom: 0px;
     outline: 0;
-  }
-/*Botão padrão*/  
+}
+
+/*Botão padrão*/
 
 /*Padrão*/
 
 /*Header e Home*/
-.fundo-header-home{
+.fundo-header-home {
     height: 100vh;
-    background: rgb(8,23,44);
-    background: linear-gradient(90deg, rgba(8,23,44,1) 0%, rgba(29,100,142,1) 61%);
+    background: rgb(8, 23, 44);
+    background: linear-gradient(90deg, rgba(8, 23, 44, 1) 0%, rgba(29, 100, 142, 1) 61%);
 }
-header{
+
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
-.home{
+.home {
     height: calc(100vh - 100px);
     position: relative;
 }
-.nuvem{
+
+.nuvem {
     width: 100%;
     height: auto;
     position: absolute;
     bottom: 0;
     z-index: 1;
 }
-.menina{
+
+.menina {
     width: 80%;
     position: absolute;
     bottom: 0;
     right: 70px;
 }
-.bt-home{
+
+.bt-home {
     display: none;
 }
-.titulo-home{
+
+.titulo-home {
     color: #fff;
     font-size: 5em;
     font-family: "Josefin Sans", sans-serif;
 }
-.subtitulo-idade{
+
+.subtitulo-idade {
     color: #E6AF2E;
-    
+
 }
-.subtitulo-home{
+
+.subtitulo-home {
     color: #2ECC71;
     font-size: 1.3em;
 }
-.conteudo-home{
+
+.conteudo-home {
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/*Beneficios*/
+.beneficios {
+    height: 100vh;
+}
+
+.titulo-beneficios {
+    padding-top: 50px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.grid-beneficios {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.conteudo-beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.beneficio {
+    padding: 20px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.beneficio:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.p-beneficios {
+    color: rgb(38, 38, 38);
+    text-align: justify;
+    padding-top: 20px;
+}
+/*Beneficios*/
+
+/*Conteudos*/
+.titulo-conteudos{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 100px;
+}
+
+
+/*Carousel*/
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-text {
+    margin-top: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+
+
+
+/*Telas pequenas*/
+@media (max-width: 1024px) {}
+
 
 /*Tablet*/
-@media (max-width: 1024px){
-    .menina{
+@media (max-width: 768px) {
+    .menina {
         width: 120%;
         right: 45px;
     }
-}
-/*Mobile*/
-@media (max-width: 576px){
-    .bt-home{
-        display: inline;
-    }
-    .bt-header{
-        display: none
-    }
-    header{
-        justify-content: center;
-    }
-    .conteudo-home{
+
+    .conteudo-home {
         text-align: center;
     }
-    .titulo-home{
+
+    .conteudo-home>* {
+        margin-bottom: 20px;
+    }
+
+    .grid-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-beneficios,
+    .titulo-beneficios {
+        text-align: center;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 480px) {
+    .bt-home {
+        display: inline;
+    }
+
+    .bt-header {
+        display: none
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .conteudo-home {
+        text-align: center;
+    }
+
+    .conteudo-home>* {
+        margin-bottom: 20px;
+    }
+
+    .titulo-home {
         font-size: 3em;
     }
-    .subtitulo-idade{
+
+    .subtitulo-idade {
         margin-bottom: 50px;
     }
-    .bt-home{
+
+    .bt-home {
         margin: 0 auto;
+    }
+
+    .imagem-beneficios img {
+        width: 300px;
+    }
+
+    .conteudo-beneficios {
+        grid-template-columns: 1fr;
     }
 }
