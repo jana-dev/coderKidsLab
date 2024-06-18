@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+/*Padrão*/
+.max-container-center{
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+/*Botão padrão*/
+.cta-aula-experimental {
+    z-index: 20;
+    width: 200px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5cdb95;
+    color: black;
+  }
+  
+  .cta-aula-experimental span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+    color: black;
+  }
+  
+  .cta-aula-experimental:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+  }
+/*Botão padrão*/  
+
+/*Padrão*/
+
+/*Header e Home*/
+.fundo-header-home{
+    height: 100vh;
+    background: rgb(8,23,44);
+    background: linear-gradient(90deg, rgba(8,23,44,1) 0%, rgba(29,100,142,1) 61%);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.home{
+    height: calc(100vh - 100px);
+    position: relative;
+}
+.nuvem{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.menina{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+}
+.bt-home{
+    display: none;
+}
+.titulo-home{
+    color: #fff;
+    font-size: 5em;
+    font-family: "Josefin Sans", sans-serif;
+}
+.subtitulo-idade{
+    color: #E6AF2E;
+    
+}
+.subtitulo-home{
+    color: #2ECC71;
+    font-size: 1.3em;
+}
+.conteudo-home{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*Tablet*/
+@media (max-width: 1024px){
+    .menina{
+        width: 120%;
+        right: 45px;
+    }
+}
+/*Mobile*/
+@media (max-width: 576px){
+    .bt-home{
+        display: inline;
+    }
+    .bt-header{
+        display: none
+    }
+    header{
+        justify-content: center;
+    }
+    .conteudo-home{
+        text-align: center;
+    }
+    .titulo-home{
+        font-size: 3em;
+    }
+    .subtitulo-idade{
+        margin-bottom: 50px;
+    }
+    .bt-home{
+        margin: 0 auto;
+    }
+}
