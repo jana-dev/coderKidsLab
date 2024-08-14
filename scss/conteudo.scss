@@ -1,0 +1,66 @@
+.conteudos{
+    height: 85vh;
+}
+.titulo-conteudos{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 100px 0;
+}
+
+.carousel-conteudos{
+    display: flex;
+    gap: 50px;
+    animation: scroll 40s linear infinite;
+    width: calc(10 * 300px + 10 * 50px);
+    will-change: transform;
+}
+.carousel-card{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.carousel-titulo-card{
+    margin-top: 20px;
+    color: #009EFF;
+    text-align: center;
+}
+.carousel-descricao-card{
+    font-weight: bold;
+    color: #494a4b;
+    text-align: center;
+}
+.carousel-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.carousel-container::before,
+.carousel-container::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    pointer-events: none;
+}
+.carousel-container::before {
+    z-index: 999;
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}

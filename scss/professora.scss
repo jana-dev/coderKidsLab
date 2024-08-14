@@ -1,0 +1,22 @@
+.professora{
+    height: 100vh;
+}
+.professora h3{
+    margin: 70px 0 0 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+.container-professora{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.conteudo-prof{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    
+}
+.conteudo-prof p{
+    text-align: right;
+}

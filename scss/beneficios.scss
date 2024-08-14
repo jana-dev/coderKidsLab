@@ -1,0 +1,58 @@
+.beneficios {
+    height: 100%;
+}
+
+.titulo-beneficios {
+    padding-top: 50px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.grid-beneficios {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.conteudo-beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.beneficio {
+    padding: 20px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.beneficio:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.p-beneficios {
+    color: rgb(38, 38, 38);
+    text-align: justify;
+    padding-top: 20px;
+}
+
+/*Telas*/
+/*Tablet*/
+@media (max-width: 768px) {
+    .grid-beneficios {
+      grid-template-columns: 1fr;
+    }
+    .imagem-beneficios,
+    .titulo-beneficios {
+      text-align: center;
+    }
+  }
+  /*Mobile*/
+  @media (max-width: 480px) {
+    .imagem-beneficios img {
+      width: 300px;
+    }
+    .conteudo-beneficios {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,134 @@
+@import 'home';
+@import 'beneficios';
+@import 'conteudo';
+@import 'depoimentos';
+@import 'projetos';
+@import 'aula-experimental';
+@import 'professora';
+@import 'footer';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/*Padrão*/
+.max-container-center {
+    max-width: 1160px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+/*Botão padrão*/
+.cta-aula-experimental {
+    z-index: 20;
+    width: 200px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5cdb95;
+    color: black;
+}
+
+.cta-aula-experimental span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+    color: black;
+}
+
+.cta-aula-experimental:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+
+
+/*Telas*/
+@media (max-width: 1024px) {}
+
+
+/*Tablet*/
+@media (max-width: 768px) {
+    .menina {
+        width: 120%;
+        right: 45px;
+    }
+
+    .conteudo-home {
+        text-align: center;
+    }
+
+    .conteudo-home>* {
+        margin-bottom: 20px;
+    }
+
+    .grid-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-beneficios,
+    .titulo-beneficios {
+        text-align: center;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 480px) {
+    .bt-home {
+        display: inline;
+    }
+
+    .bt-header {
+        display: none
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .conteudo-home {
+        text-align: center;
+    }
+
+    .conteudo-home>* {
+        margin-bottom: 20px;
+    }
+
+    .titulo-home {
+        font-size: 3em;
+    }
+
+    .subtitulo-idade {
+        margin-bottom: 50px;
+    }
+
+    .bt-home {
+        margin: 0 auto;
+    }
+
+    .imagem-beneficios img {
+        width: 300px;
+    }
+
+    .conteudo-beneficios {
+        grid-template-columns: 1fr;
+    }
+}

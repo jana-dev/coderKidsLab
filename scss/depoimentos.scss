@@ -1,0 +1,72 @@
+.depoimentos{
+    background: rgb(145,2,208);
+    background: linear-gradient(90deg, rgba(145,2,208,1) 0%, rgba(113,1,172,1) 51%, rgba(78,1,133,1) 100%);
+    height: 80vh;
+    position: relative;
+    border-radius: 0 0 10% 10%;
+}
+.nuvem-final{
+    transform:rotate(180deg);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -2px;
+}
+.conteudo-depoimento{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80vh;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 50px;
+}
+.titulo-botoes-depoimento,
+.depoimentos-alunos{
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    z-index: 999;
+}
+
+.titulo-botoes-depoimento{
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo-botoes-depoimento h3{
+    color: white;
+    font-size: 2em;
+}
+#bt-proximo-depo,
+#bt-anterior-depo{
+    margin: 40px 5px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#bt-proximo-depo{
+   background-color: #FE7EB1;
+   color: white;
+   border-radius: 40% 50% / 40% 50%;
+}
+#bt-anterior-depo{
+    background-color: #B4B4B4;
+    color: rgb(197, 197, 197);
+    padding-left: 10px;
+    border-radius: 40% 50% / 40% 50%;
+}
+.depoimentos-alunos{
+    flex-direction: column;
+    justify-content: center;
+}
+.depo{
+    color: rgb(212, 212, 212);
+    text-align: justify;
+}
+.nome-aluno{
+    width: 100%;
+    text-align: right;
+    color: #2ECC71;
+    margin-top: 20px;
+}

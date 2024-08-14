@@ -1,0 +1,126 @@
+.fundo-header-home {
+    height: 100%;
+    background: rgb(8, 23, 44);
+    background: linear-gradient(90deg, rgba(8, 23, 44, 1) 0%, rgba(29, 100, 142, 1) 61%);
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.home {
+    height: calc(100vh - 100px);
+    position: relative;
+    background-image: url('../src/img/fundo-menina-test.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    
+}
+
+.nuvem {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+}
+
+.bt-home {
+    display: none;
+}
+
+.titulo-home {
+    color: #fff;
+    font-size: 5em;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.subtitulo-idade {
+    color: #E6AF2E;
+
+}
+
+.subtitulo-home {
+    color: #2ECC71;
+    font-size: 1.3em;
+}
+
+.conteudo-home {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*Telas*/
+/*Tablet*/
+@media (max-width: 768px) {
+    .conteudo-home {
+      text-align: center;
+    }
+    .conteudo-home > * {
+      margin-bottom: 20px;
+    }
+  }
+  /*Mobile*/
+  @media (max-width: 480px) {
+    .bt-home {
+      display: inline;
+    }
+    .bt-header {
+      display: none;
+    }
+    header {
+      justify-content: center;
+    }
+    .conteudo-home {
+      text-align: center;
+    }
+    .conteudo-home > * {
+      margin-bottom: 20px;
+    }
+    .titulo-home {
+      font-size: 3em;
+    }
+    .subtitulo-idade {
+      margin-bottom: 50px;
+    }
+    .bt-home {
+      margin: 0 auto;
+    }
+    .home{
+        background-size: 100%;
+        background-position: 50% 35%;
+        background-position-x: -200px;
+    }
+  }
+
+
+
+/*Ajuste do fundo da menina em alturas diferentes de mobile*/
+/* Para telas com altura menor que 1000px */
+@media (max-height: 1000px) {
+    .home {
+        height: calc(80vh - 100px); /* Ajuste de altura */
+    }
+}
+
+/* Para telas com altura menor que 800px */
+@media (max-height: 900px) {
+    .home {
+        height: calc(85vh - 100px); /* Ajuste de altura */
+    }
+}
+
+/* Para telas com altura menor que 600px */
+@media (max-height: 800px) {
+    .home {
+        height: calc(97vh - 100px); /* Ajuste de altura */
+    }
+}

@@ -1,0 +1,73 @@
+footer{
+    height: 200px;
+    background-color: #39385A;
+}
+.conteudo-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+}
+ul{
+    list-style-type: none;
+}
+.links li{
+    display: inline;
+    padding-right: 20px;
+    font-size: 1.5em;
+    color: rgb(205, 205, 205);
+}
+.fa-instagram{
+    transition: color 0.3s ease-in-out;
+}
+.fa-instagram:hover{
+    color: #E1306C;
+}
+.fa-whatsapp{
+    transition: color 0.3s ease-in-out;
+}
+.fa-whatsapp:hover{
+    color: #26C943;
+}
+.fa-envelope{
+    transition: color 0.3s ease-in-out;
+}
+.fa-envelope:hover{
+    color: #0F6CBD;
+}
+.conteudo-footer p{
+    font-size: 11px;
+    color: #a6a6a6;
+}
+.fa-heart{
+    color: #36D7D5;
+}
+
+nav ul li{
+    font-size: 16px;
+    display: inline;
+    padding-right: 10px;
+}
+a{
+    color: rgb(205, 205, 205);
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #E6AF2E;
+}
+.email-footer{
+    font-size: 12px;
+}
+.email-footer:hover{
+    color: #E6AF2E;
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    .conteudo-footer{
+        flex-wrap: wrap;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 480px) {}

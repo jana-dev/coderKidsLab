@@ -1,0 +1,58 @@
+.aula-experimental{
+    height: 70vh;
+    background-color: #99E291;
+    border-radius: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.aula-experimental h3{
+    padding: 50px 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.aula-experimental h5{
+    padding-left: 15px;
+}
+.container-experimental{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.conteudos-experimental{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.conteudos-experimental div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.bt-agendar-experimental{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #6da36768 0px 5px 15px;
+    border-radius: 20px;
+}
+.bt-agendar-experimental p{
+    font-weight: bold;
+    text-align: center;
+    color: rgb(40, 40, 40);
+}
+.bt-agendar{
+    text-decoration: none;
+    color: white;
+    background-color: #422774;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 20px 0;
+    transform: rotate(4deg);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out;
+}
+.bt-agendar:hover{
+    background-color: #380f86;
+}
+.bt-agendar:active{
+    transform: rotate(0);
+}
