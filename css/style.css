@@ -246,12 +246,18 @@ header {
     transform: translateX(-50%);
   }
 }
+/*Mobile*/
+@media (max-width: 600px) {
+  .titulo-conteudos {
+    margin: 50px 0;
+  }
+}
 .depoimentos {
   background: rgb(145, 2, 208);
   background: linear-gradient(90deg, rgb(145, 2, 208) 0%, rgb(113, 1, 172) 51%, rgb(78, 1, 133) 100%);
-  height: 80vh;
+  height: 100vh;
   position: relative;
-  border-radius: 0 0 10% 10%;
+  display: flex;
 }
 
 .nuvem-final {
@@ -306,10 +312,14 @@ header {
 }
 
 #bt-anterior-depo {
-  background-color: #B4B4B4;
-  color: rgb(197, 197, 197);
+  background-color: #FE7EB1;
+  color: white;
   padding-left: 10px;
   border-radius: 40% 50%/40% 50%;
+}
+
+#bt-anterior-depo:hover, #bt-proximo-depo:hover {
+  background-color: #2ECC71;
 }
 
 .depoimentos-alunos {
@@ -329,101 +339,48 @@ header {
   margin-top: 20px;
 }
 
+/*Mobile*/
+@media (max-width: 600px) {
+  .conteudo-depoimento {
+    grid-template-columns: 1fr;
+  }
+  .depoimentos-alunos {
+    padding-top: 0;
+  }
+  .conteudo-depoimento {
+    padding-bottom: 50px;
+  }
+}
 .projetos {
   height: 100vh;
+  margin-bottom: 50px;
 }
 
 .projetos h3 {
   text-align: center;
   font-size: 1.5em;
-  margin: 50px;
+  padding: 50px;
 }
 
-.conteudo-projetos {
-  height: 500px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 700px;
+.video-content {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
   margin: auto;
-  padding-bottom: 50px;
 }
 
-.projeto-roblox {
-  height: 100%;
-}
-
-.segunda-coluna {
-  height: 100%;
-  display: grid;
-}
-
-.projetos-jogos,
-.projeto-site-app {
-  height: 100%;
-  display: flex;
-}
-
-.card-projeto {
+video {
   width: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.95)), url("https://blog.saga.art.br/wp-content/uploads/2020/08/SAGA-BLOG-cuphead.jpg");
-  background-size: cover;
-  background-position: center;
-  margin: 10px;
-  border-radius: 20px;
-  position: relative;
-}
-
-.img-roblox {
-  height: 96%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.95)), url("https://blog.saga.art.br/wp-content/uploads/2020/08/SAGA-BLOG-cuphead.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  margin: 10px;
-}
-
-.bt-card-projeto {
-  text-align: center;
-  position: absolute;
-  bottom: 20px;
-  color: white;
-  width: 100%;
-}
-
-.bt-card-projeto a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  background-color: #1A587F;
-  border-radius: 20px;
-  padding: 5px 10px;
-}
-
-.titulo-card-projeto {
-  height: 25px;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  color: black;
-  border-radius: 20px 20px 0 0;
-  transition: height 0.3s ease-in-out, border-radius 0.3s ease-in-out, align-items 0.3s ease-in-out, justify-content 0.3s ease-in-out;
-  display: flex;
-  align-items: flex-end; /* Alinha o texto na parte inferior inicialmente */
-  justify-content: center;
-}
-
-.card-projeto:hover .titulo-card-projeto {
-  height: 100%;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .aula-experimental {
-  height: 70vh;
-  background-color: #99E291;
-  border-radius: 20px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  height: 100vh;
+  display: flex;
+}
+
+.aula-experimental h5 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .aula-experimental h3 {
@@ -437,14 +394,17 @@ header {
 }
 
 .container-experimental {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .conteudos-experimental {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .conteudos-experimental div {
@@ -460,6 +420,7 @@ header {
   align-items: center;
   box-shadow: rgba(109, 163, 103, 0.4078431373) 0px 5px 15px;
   border-radius: 20px;
+  padding: 20px;
 }
 
 .bt-agendar-experimental p {
@@ -488,12 +449,29 @@ header {
   transform: rotate(0);
 }
 
+/*Mobile*/
+@media (max-width: 600px) {
+  .aula-experimental {
+    height: 100%;
+  }
+  .container-experimental {
+    grid-template-columns: 1fr;
+  }
+  .conteudos-experimental {
+    grid-template-columns: 1fr;
+  }
+  .bt-agendar-experimental {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+}
 .professora {
   height: 100vh;
+  margin-bottom: 50px;
 }
 
 .professora h3 {
-  margin: 70px 0 0 0;
+  padding: 70px 0 0 0;
   font-size: 1.5em;
   text-align: center;
 }
@@ -514,6 +492,21 @@ header {
   text-align: right;
 }
 
+/*Mobile*/
+@media (max-width: 600px) {
+  .container-professora {
+    grid-template-columns: 1fr;
+  }
+  .foto-prof img {
+    width: 100%;
+  }
+  .conteudo-prof p {
+    text-align: center;
+  }
+  .professora {
+    height: 100%;
+  }
+}
 footer {
   height: 200px;
   background-color: #39385A;

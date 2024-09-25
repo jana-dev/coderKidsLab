@@ -1,8 +1,9 @@
 .professora{
     height: 100vh;
+    margin-bottom: 50px;
 }
 .professora h3{
-    margin: 70px 0 0 0;
+    padding: 70px 0 0 0;
     font-size: 1.5em;
     text-align: center;
 }
@@ -19,4 +20,21 @@
 }
 .conteudo-prof p{
     text-align: right;
+}
+
+/*Mobile*/
+
+@media (max-width: 600px) {
+    .container-professora{
+        grid-template-columns: 1fr;
+    }
+    .foto-prof img{
+        width: 100%;
+    }
+    .conteudo-prof p {
+        text-align: center;
+    }
+    .professora{
+        height: 100%;
+    }
 }

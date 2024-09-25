@@ -1,83 +1,18 @@
 .projetos{
     height: 100vh;
+    margin-bottom: 50px;
 }
 .projetos h3{
     text-align: center;
     font-size: 1.5em;
-    margin: 50px;
+    padding: 50px;
 }
-.conteudo-projetos{
-    height: 500px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 700px;
+.video-content{
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
     margin: auto;
-    padding-bottom: 50px;
 }
-.projeto-roblox{
-    height: 100%;
-}
-.segunda-coluna{
-    height: 100%;
-    display: grid;
-}
-.projetos-jogos,
-.projeto-site-app{
-    height: 100%;
-    display: flex;
-}
-.card-projeto{
+video{
     width: 100%;
-    background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.95)),
-    url('https://blog.saga.art.br/wp-content/uploads/2020/08/SAGA-BLOG-cuphead.jpg');
-    background-size: cover;
-    background-position: center;
-    margin: 10px;
-    border-radius:20px;
-    position: relative;
-    
-}
-.img-roblox{
-    height: 96%;
-    background-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.95)),
-    url('https://blog.saga.art.br/wp-content/uploads/2020/08/SAGA-BLOG-cuphead.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    margin: 10px;
-}
-.bt-card-projeto{
-    text-align: center;
-    position: absolute;
-    bottom: 20px;
-    color: white;
-    width: 100%;
-}
-.bt-card-projeto a{
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    background-color: #1A587F;
-    border-radius: 20px;
-    padding: 5px 10px;
-}
-.titulo-card-projeto{
-    height: 25px;
-    text-align: center;
-    backdrop-filter: blur(5px);
-    color: black;
-    border-radius:20px 20px 0 0;
-    transition: height 0.3s ease-in-out, border-radius 0.3s ease-in-out, align-items 0.3s ease-in-out, justify-content 0.3s ease-in-out;
-    display: flex;
-    align-items: flex-end; /* Alinha o texto na parte inferior inicialmente */
-    justify-content: center;
-}
-.card-projeto:hover .titulo-card-projeto{
-    height: 100%;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
