@@ -14,8 +14,15 @@
     box-sizing: border-box;
 }
 
+/* Para navegadores que suportam o estilo de rolagem personalizado */
 body {
     font-family: "Poppins", sans-serif;
+    overflow-y: scroll;
+   
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 /*Padrão*/

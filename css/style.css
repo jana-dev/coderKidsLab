@@ -255,7 +255,6 @@ header {
 .depoimentos {
   background: rgb(145, 2, 208);
   background: linear-gradient(90deg, rgb(145, 2, 208) 0%, rgb(113, 1, 172) 51%, rgb(78, 1, 133) 100%);
-  height: 100vh;
   position: relative;
   display: flex;
 }
@@ -268,20 +267,35 @@ header {
   top: -2px;
 }
 
+.nuvem-inicio-depoimento {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: auto;
+}
+
 .conteudo-depoimento {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 80vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 36vh;
   max-width: 1000px;
   margin: auto;
   padding: 0 50px;
+}
+
+.img-depoimento {
+  position: relative;
+}
+
+.img-depoimento img {
+  position: absolute;
+  bottom: 0;
 }
 
 .titulo-botoes-depoimento,
 .depoimentos-alunos {
   display: flex;
   align-items: center;
-  padding-top: 80px;
   z-index: 999;
 }
 
@@ -343,17 +357,22 @@ header {
 @media (max-width: 600px) {
   .conteudo-depoimento {
     grid-template-columns: 1fr;
+    height: 100%;
   }
   .depoimentos-alunos {
     padding-top: 0;
   }
   .conteudo-depoimento {
-    padding-bottom: 50px;
+    padding: 50px;
+  }
+  .img-depoimento {
+    display: none;
   }
 }
 .projetos {
   height: 100vh;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .projetos h3 {
@@ -375,7 +394,7 @@ video {
 
 .aula-experimental {
   height: 100vh;
-  display: flex;
+  position: relative;
 }
 
 .aula-experimental h5 {
@@ -449,6 +468,17 @@ video {
   transform: rotate(0);
 }
 
+/* Animação para o foguete */
+.aula-experimental .foguete {
+  position: fixed;
+  top: 0px; /* Começa fora da tela na parte superior */
+  right: 0; /* Alinhado à direita */
+  width: 50px;
+  transition: transform 0.1s ease-out;
+  z-index: 1000;
+  transform-origin: center; /* Define o ponto de rotação no centro */
+}
+
 /*Mobile*/
 @media (max-width: 600px) {
   .aula-experimental {
@@ -508,15 +538,33 @@ video {
   }
 }
 footer {
-  height: 200px;
+  height: 450px;
   background-color: #39385A;
+  position: relative;
+  display: flex;
+}
+
+.max-container-footer {
+  width: 100%;
+}
+
+.nuvem-footer {
+  position: absolute;
+  top: -10px;
+  transform: rotate(180deg);
+  width: 100%;
+  height: auto;
 }
 
 .conteudo-footer {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: end;
   height: 200px;
+}
+
+.logo-footer {
+  height: 78px;
 }
 
 ul {
@@ -599,8 +647,14 @@ nav ul li a:hover {
   box-sizing: border-box;
 }
 
+/* Para navegadores que suportam o estilo de rolagem personalizado */
 body {
   font-family: "Poppins", sans-serif;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /*Padrão*/

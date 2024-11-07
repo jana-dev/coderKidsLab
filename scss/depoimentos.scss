@@ -1,7 +1,6 @@
 .depoimentos{
     background: rgb(145,2,208);
     background: linear-gradient(90deg, rgba(145,2,208,1) 0%, rgba(113,1,172,1) 51%, rgba(78,1,133,1) 100%);
-    height: 100vh;
     position: relative;
     display: flex;
 }
@@ -12,19 +11,35 @@
     position: absolute;
     top: -2px;
 }
+
+.nuvem-inicio-depoimento{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+}
 .conteudo-depoimento{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 80vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 36vh;
     max-width: 1000px;
     margin: auto;
     padding: 0 50px;
+}
+
+.img-depoimento{
+    position: relative;
+}
+
+.img-depoimento img{
+    position: absolute;
+    bottom: 0;
 }
 .titulo-botoes-depoimento,
 .depoimentos-alunos{
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    // padding-top: 80px;
     z-index: 999;
 }
 
@@ -78,11 +93,15 @@
 @media (max-width: 600px){
     .conteudo-depoimento{
         grid-template-columns: 1fr;
+        height: 100%;
     }
     .depoimentos-alunos{
         padding-top: 0;
     }
     .conteudo-depoimento{
-        padding-bottom: 50px;
+        padding: 50px;
+    }
+    .img-depoimento{
+        display: none;
     }
 }

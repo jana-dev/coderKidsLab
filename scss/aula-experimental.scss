@@ -2,10 +2,10 @@
     height: 100vh;
     //background-color: #99E291;
     //box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    display: flex;
-
+    position: relative;
     
 }
+
 
 .aula-experimental h5{
     text-align: center;
@@ -67,6 +67,35 @@
 .bt-agendar:active{
     transform: rotate(0);
 }
+
+/* Animação para o foguete */
+// @keyframes fly {
+//     0% {
+//         transform: translateX(-100vw); /* Começa fora da tela pela esquerda */
+//     }
+//     100% {
+//         transform: translateX(100vw); /* Termina fora da tela pela direita */
+//     }
+// }
+
+// /* Aplicar a animação ao foguete */
+// .aula-experimental img[src*="foguete"] {
+//     position: absolute;
+//     top:-50px; /* Ajuste a posição vertical conforme necessário */
+//     left: 0;
+//     animation: fly 10s linear infinite; /* Ajuste a duração conforme desejado */
+// }
+
+.aula-experimental .foguete {
+    position: fixed;
+    top: 0px; /* Começa fora da tela na parte superior */
+    right: 0; /* Alinhado à direita */
+    width: 50px;
+    transition: transform 0.1s ease-out;
+    z-index: 1000;
+    transform-origin: center; /* Define o ponto de rotação no centro */
+}
+
 
 
 /*Mobile*/
